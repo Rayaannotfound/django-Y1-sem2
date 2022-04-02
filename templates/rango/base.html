@@ -1,7 +1,7 @@
  <!DOCTYPE html>
  {% load staticfiles %}
+ {% load rango_template_tags %}
 
- <html>
  <head>
  <title>
  Rango -
@@ -13,9 +13,17 @@
  <body>
  <div>
  {% block body_block %}
- {% endblock %}
+  {% endblock %}
+
  </div>
  <hr />
+<div>
+{% block sidebar_block %}
+{% get_category_list category %}
+{% endblock %}
+</div>
+
+
  <div>
  <ul>
  <li><a href="{% url 'rango:add_category' %}">Add a New Category</a></li>

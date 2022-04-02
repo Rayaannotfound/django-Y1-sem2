@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<ul>
+{% for c in categories %}
+{% if c == current_category %}
+<li>
+<strong>
+<a href="{% url 'rango:show_category' c.slug %}">{{ c.name }}</a>
+</strong>
+</li>
+{% else %}
+<li>
+<a href="{% url 'rango:show_category' c.slug %}">{{ c.name }}</a>
+</li>
+{% endif %}
+{% endfor %}
 
-</body>
-</html>
+ </ul>
