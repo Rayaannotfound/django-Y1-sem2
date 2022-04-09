@@ -33,7 +33,7 @@ SECRET_KEY = 'myhrdf6an6cm8_ffb0lk%4z*3)f371-zc-9m)njxdoy%d)v(-2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'rayaannotfound.pythonanywhere.com']
 
 
 # Application definition
